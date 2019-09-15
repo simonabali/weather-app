@@ -1,0 +1,32 @@
+{ request:
+    { type: 'City',
+      query: 'Lisbon, Portugal',
+      language: 'en',
+      unit: 'm' },
+   location:
+    { name: 'Lisbon',
+      country: 'Portugal',
+      region: 'Lisboa',
+      lat: '38.717',
+      lon: '-9.133',
+      timezone_id: 'Europe/Lisbon',
+      localtime: '2019-09-15 02:02',
+      localtime_epoch: 1568512920,
+      utc_offset: '1.0' },
+   current:
+    { observation_time: '01:02 AM',
+      temperature: 24,
+      weather_code: 113,
+      weather_icons:
+       [ 'https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png' ],
+      weather_descriptions: [ 'Clear' ],
+      wind_speed: 13,
+      wind_degree: 30,
+      wind_dir: 'NNE',
+      pressure: 1018,
+      precip: 0,
+      humidity: 50,
+      cloudcover: 0,
+      feelslike: 25,
+      uv_index: 0,
+      visibility: 10 } }
