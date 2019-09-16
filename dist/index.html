@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Appt</title>
+    <title>Weather App</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-    <input placeholder= "search city" id = "city-input"/>
-    <button id="location-search" onclick= >Search</button>
+
+    <input placeholder="search city" id="city-input" />
+    <button id="search-button" onclick= handleSearch() >Search</button>
+    
+    <div id="results-area"></div>
+
+    <script id="city-template" type="text/x-handlebars-template">
+      
+        {{#each allCityData}}
+            <div class="each-city-info">
+                <div class= "city-name">{{name}}</div>
+                <div>{{temperature}}</div>
+                <div>{{condition}}</div>
+                <img class="someClass" src={{conditionPic}}>
+                <div>{{updatedAt}}</div>
+                {{#if saved}}
+               <button class= "remove-button">Remove</button>
+               {{else}}
+               <button class= "save-button">Save</button>
+               {{/if}} 
+               
+            </div>
+        {{/each}}
+
+    </script>
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="TempManager.js"> </script>
+    <script src="renderer.js"> </script>
+    <script src="main.js"> </script>
 </body>
+
 </html>
