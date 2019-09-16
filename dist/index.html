@@ -12,18 +12,22 @@
 
 <body>
 
-    <input placeholder="search city" id="city-input" />
+<div id="search-area">
+    <input placeholder="Search City" id="city-input" />
     <button id="search-button" onclick= handleSearch() >Search</button>
-    
+</div>
+
     <div id="results-area"></div>
 
     <script id="city-template" type="text/x-handlebars-template">
       
         {{#each allCityData}}
             <div class="each-city-info">
-                <div class= "city-name">{{name}}</div>
+
+            <div>
+                <h2 class= "city-name">{{name}}</h2>
                 <div>{{temperature}}</div>
-                <div>{{condition}}</div>
+                <div class="condition-div">{{condition}}</div>
                 <img class="someClass" src={{conditionPic}}>
                 <div>{{updatedAt}}</div>
                 {{#if saved}}
@@ -31,7 +35,8 @@
                {{else}}
                <button class= "save-button">Save</button>
                {{/if}} 
-               
+            </div> 
+
             </div>
         {{/each}}
 
