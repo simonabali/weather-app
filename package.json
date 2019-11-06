@@ -15,7 +15,7 @@
     "handlebars": "^4.2.0",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "request": "^2.88.0"
   }
 }
